@@ -139,9 +139,6 @@ export default {
     .btn-footer button span {
         margin-left: 10px;
     }
-    .detailPokemon {
-       /* width: 100%; */
-    }
     @media (max-width: 768px) {
         .btn-footer {
             max-width: 251px;

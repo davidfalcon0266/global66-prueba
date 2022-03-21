@@ -78,14 +78,6 @@
                this.getPokemonByName(name);
             }
         },
-        filters: {
-            capitalize: function (value) {
-                console.log(value)
-                if (!value) return '';
-                value = value.toString()
-                return value.charAt(0).toUpperCase() + value.slice(1)
-            }
-        },
         methods: {
             getPokemonByName(name) {
                 axios.get(this.url+name).then(result => {
@@ -103,8 +95,6 @@
                         if(types.length > 1) {
                            typo2 = ', '+ types[1].type.name;
                         }
-
-
                         this.detailPokemon.name = name;
                         this.detailPokemon.weight = weight;
                         this.detailPokemon.height = height;
@@ -114,8 +104,7 @@
                         this.dataCopy = `Name: ${name}, Weight: ${weight}, Height: ${height}, Type: ${this.detailPokemon.types}, Imagen: ${img}`;
                         // Validamos si el tipo de pokemon contiene mas de un tipo para agregarle una 'S' a type
                        this.validateTypes();
-                       this.hiddenLoadin();
-                       
+                       this.hiddenLoadin();                   
                     } else {
                        this.loading = false;
                     }
@@ -148,7 +137,6 @@
                 return tem.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
             }
         }
-
     }
 </script>
 
