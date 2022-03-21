@@ -84,6 +84,12 @@ export default {
             })
         }
     },
+    watch: {
+        opcionesCliente(value) {
+            this.pokemon = '';
+            this.valueSearch = '';
+        }
+    },
     methods: {
         saveFavorite(item, name) {
             for(let i = 0; i < this.pokemones.length; i++) {
