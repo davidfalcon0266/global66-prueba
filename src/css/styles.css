@@ -1,0 +1,59 @@
+html, body {
+    margin: 0 auto;
+    padding: 0;
+    background: #E5E5E5;
+    font-family: 'Lato';
+}
+a {
+    text-decoration: none;
+}
+.button-general {
+    background: #F22539;
+    border-radius: 60px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    height: 44px; 
+}
+
+button:disabled {
+    background-color: #BFBFBF;
+}
+
+.modal {
+    height: 100vh;
+    left: 0px;
+    max-height: 100%;
+    max-width: 100%;
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.slide-fade-enter-active {
+    transition: all .3s ease-in-out;
+}
+.slide-fade-leave-active {
+transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+transform: translateX(2px);
+opacity: 0;
+}
+
+@media (max-width: 768px) {
+    #app {
+        overflow-x: hidden;
+    }
+}
