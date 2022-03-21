@@ -147,10 +147,11 @@
     .container-detail {
         max-width: 570px;
         width: 100%;
-        min-height: 506px;
-        width: 100%;
+        max-height: 506px;
+        height: 100%;
         background: #FFFFFF;
         border-radius: 5px;
+        overflow: auto;
     }
     .img-pokemon {
         position: relative;
